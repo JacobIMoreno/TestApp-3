@@ -10,14 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace testapp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : ContentPage
+    public partial class RegisterPage : ContentPage
     {
-        readonly Animation LoadingAnimation;
-        public HomePage()
+        public RegisterPage()
         {
             InitializeComponent();
+        }
 
-            
+        private void Label_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LoginUI());
         }
     }
 }

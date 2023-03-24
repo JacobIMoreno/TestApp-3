@@ -16,14 +16,11 @@ namespace testapp
         {
             InitializeComponent();
         }
-        //int count = 0;
+        
         void Button_Clicked(object sender, System.EventArgs e)
-        {
-            
-            //count++;
-            //((Button)sender).Text = $"You clicked {count} times.";
+        { 
 
-            if (txtUsername.Text == "admin" && txtPassword.Text == "123")
+            if (txtEmail.Text == "admin" && txtPassword.Text == "123")
             {
                 Navigation.PushAsync(new HomePage());
             }
@@ -35,7 +32,7 @@ namespace testapp
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new HomePage());
+            Navigation.PushAsync(new RegisterPage());
         }
     }
 }
